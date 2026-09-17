@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sản phẩm TH true MILK</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="products.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+
+    <header>
+      <div class="hamburger" onclick="openMenu()">☰</div>
+
+      <a href="index.html" class="logo-link">
+        <div class="logo-custom">
+          <span class="logo-th">
+            TH
+
+            <span class="flower"> ✦ </span>
+          </span>
+
+          <span class="logo-true"> true </span>
+
+          <span class="logo-milk"> MILK </span>
+        </div>
+      </a>
+
+      <nav>
+        <a href="index.html"> Trang chủ </a>
+
+        <a href="products.html" class="active"> Sản phẩm </a>
+
+        <a href="index.html#contact"> Liên hệ </a>
+      </nav>
+
+      <div class="header-right">
+        <div class="cart-icon" onclick="openCart()">
+          🛒
+
+          <span id="cart-count"> 0 </span>
+        </div>
+
+        <button>Đăng nhập</button>
+      </div>
+    </header>
+
+    <!-- MENU -->
+
+    <div class="overlay" onclick="closeMenu()"></div>
+
+    <div class="side-menu">
+      <div class="menu-header">
+        TH true MILK
+
+        <span onclick="closeMenu()"> × </span>
+      </div>
+
+      <a href="index.html"> Trang chủ </a>
+
+      <a href="products.html"> Sản phẩm </a>
+
+      <a href="index.html#promotion"> Khuyến mãi </a>
+
+      <a href="index.html#story"> Câu chuyện TH </a>
+
+      <a href="index.html#contact"> Liên hệ </a>
+    </div>
+
+    <!-- PRODUCT -->
+
+    <section class="product-page">
+      <h1>Tất cả sản phẩm</h1>
+
+      <div class="shop-tools">
+        <input
+          id="search-product"
+          type="text"
+          placeholder="Tìm kiếm sản phẩm..."
+          onkeyup="searchProduct()"
+        />
+
+        <select id="sort-price" onchange="sortProduct()">
+          <option value="">Sắp xếp giá</option>
+
+          <option value="asc">Giá thấp đến cao</option>
+
+          <option value="desc">Giá cao đến thấp</option>
+        </select>
+      </div>
+
+      <!-- GRID BẮT ĐẦU -->
+
+      <div class="product-grid">
+        <!-- PRODUCT 1 -->
+
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              'TH true MILK nguyên chất',
+              35000,
+              this.querySelector('img').src,
+            )
+          "
+          data-name="TH true MILK nguyên chất"
+          data-price="35000"
+        >
+          <span class="heart" onclick="favorite(this)"> ♡ </span>
+
+          <img src="images/UHT-nguyen-chat-1L_275x186.png" />
+
+          <h3>TH true MILK nguyên chất</h3>
+
+          <p>Hộp 1L</p>
+
+          <strong> 35.000đ </strong>
+
+          <button
+            onclick="
+              event.stopPropagation();
+              addCart(
+                'TH true MILK nguyên chất',
+                35000,
+                'images/UHT-nguyen-chat-1L_275x186.png',
+                this,
+              );
+            "
+          >
+            Thêm vào giỏ
+          </button>
+        </div>
+
+        <!-- PRODUCT 2 -->
+
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              'TH true MILK ít đường',
+              38000,
+              this.querySelector('img').src,
+            )
+          "
+          data-name="TH true MILK ít đường"
+          data-price="38000"
+        >
+          <span class="heart" onclick="favorite(this)"> ♡ </span>
+
+          <img src="images/UHT-it-duong-1L_275x186.png" />
+
+          <h3>TH true MILK ít đường</h3>
+
+          <p>Hộp 1L</p>
+
+          <strong> 38.000đ </strong>
+
+          <button
+            onclick="
+              event.stopPropagation();
+              addCart(
+                'TH true MILK ít đường',
+                38000,
+                'images/UHT-it-duong-1L_275x186.png',
+                this,
+              );
+            "
+          >
+            Thêm vào giỏ
+          </button>
+        </div>
+
+        <!-- PRODUCT 3 -->
+
+        <div
+          class="product-card"
+          onclick="
+            openProduct('TH true YOGURT', 28000, this.querySelector('img').src)
+          "
+          data-name="TH true YOGURT"
+          data-price="28000"
+        >
+          <span class="heart" onclick="favorite(this)"> ♡ </span>
+
+          <img src="images/suachua.png" />
+
+          <h3>TH true YOGURT</h3>
+
+          <p>Lốc 4 hộp</p>
+
+          <strong> 28.000đ </strong>
+
+          <button
+            onclick="
+              event.stopPropagation();
+              addCart('TH true YOGURT', 28000, 'images/suachua.png', this);
+            "
+          >
+            Thêm vào giỏ
+          </button>
+        </div>
+
+        <!-- PRODUCT 4 -->
+
+        <div
+          class="product-card"
+          onclick="
+            openProduct('TH true NUT', 45000, this.querySelector('img').src)
+          "
+          data-name="TH true NUT"
+          data-price="45000"
+        >
+          <span class="heart" onclick="favorite(this)"> ♡ </span>
+
+          <img src="images/hạnh-nhân-1-l-thumb.png" />
+
+          <h3>TH true NUT</h3>
+
+          <p>Sữa hạt</p>
+
+          <strong> 45.000đ </strong>
+
+          <button
+            onclick="
+              event.stopPropagation();
+              addCart(
+                'TH true NUT',
+                45000,
+                'images/hạnh-nhân-1-l-thumb.png',
+                this,
+              );
+            "
+          >
+            Thêm vào giỏ
+          </button>
+        </div>
+
+        <!-- PRODUCT 5 -->
+
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              'TH true MILK Organic',
+              55000,
+              this.querySelector('img').src,
+            )
+          "
+          data-name="TH true MILK Organic"
+          data-price="55000"
+        >
+          <span class="heart" onclick="favorite(this)"> ♡ </span>
+
+          <img src="images/organic.png" />
+
+          <h3>TH true MILK Organic</h3>
+
+          <p>Sữa hữu cơ</p>
+
+          <strong> 55.000đ </strong>
+
+          <button
+            onclick="
+              event.stopPropagation();
+              addCart(
+                'TH true MILK Organic',
+                55000,
+                'images/organic.png',
+                this,
+              );
+            "
+          >
+            Thêm vào giỏ
+          </button>
+        </div>
+
+        <!-- PRODUCT 6 -->
+
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              'Sữa chua uống TH',
+              32000,
+              this.querySelector('img').src,
+            )
+          "
+          data-name="Sữa chua uống TH"
+          data-price="32000"
+        >
+          <span class="heart" onclick="favorite(this)"> ♡ </span>
+
+          <img src="images/yaour.jpeg" />
+
+          <h3>Sữa chua uống TH</h3>
+
+          <p>Chai 180ml</p>
+
+          <strong> 32.000đ </strong>
+
+          <button
+            onclick="
+              event.stopPropagation();
+              addCart('Sữa chua uống TH', 32000, 'images/yaour.jpeg', this);
+            "
+          >
+            Thêm vào giỏ
+          </button>
+        </div>
+
+        <!-- PRODUCT 7 -->
+
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              'TH true NUT óc chó',
+              49000,
+              this.querySelector('img').src,
+            )
+          "
+          data-name="TH true NUT óc chó"
+          data-price="49000"
+        >
+          <span class="heart" onclick="favorite(this)"> ♡ </span>
+
+          <img src="images/óc-chó-1-l-thumb.png" />
+
+          <h3>TH true NUT óc chó</h3>
+
+          <p>Sữa hạt dinh dưỡng</p>
+
+          <strong> 49.000đ </strong>
+
+          <button
+            onclick="
+              event.stopPropagation();
+              addCart(
+                'TH true NUT óc chó',
+                49000,
+                'images/óc-chó-1-l-thumb.png',
+                this,
+              );
+            "
+          >
+            Thêm vào giỏ
+          </button>
+        </div>
+
+        <!-- PRODUCT 8 -->
+
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              'TH true MILK thanh trùng',
+              42000,
+              this.querySelector('img').src,
+            )
+          "
+          data-name="TH true MILK thanh trùng"
+          data-price="42000"
+        >
+          <span class="heart" onclick="favorite(this)"> ♡ </span>
+
+          <img src="images/thanhtrung.png" />
+
+          <h3>TH true MILK thanh trùng</h3>
+
+          <p>Sữa tươi thanh trùng</p>
+
+          <strong> 42.000đ </strong>
+
+          <button
+            onclick="
+              event.stopPropagation();
+              addCart(
+                'TH true MILK thanh trùng',
+                42000,
+                'images/thanhtrung.png',
+                this,
+              );
+            "
+          >
+            Thêm vào giỏ
+          </button>
+        </div>
+        <!-- PRODUCT 9 -->
+
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              'TH true YOGURT nha đam',
+              35000,
+              this.querySelector('img').src,
+            )
+          "
+          data-name="TH true YOGURT nha đam"
+          data-price="35000"
+        >
+          <span class="heart" onclick="favorite(this)"> ♡ </span>
+
+          <img src="images/nhadam.png" />
+
+          <h3>TH true YOGURT nha đam</h3>
+
+          <p>Lốc 4 hộp</p>
+
+          <strong> 35.000đ </strong>
+
+          <button
+            onclick="
+              event.stopPropagation();
+              addCart(
+                'TH true YOGURT nha đam',
+                35000,
+                'images/nhadam.png',
+                this,
+              );
+            "
+          >
+            Thêm vào giỏ
+          </button>
+        </div>
+
+        <!-- PRODUCT 10 -->
+
+        <div
+          class="product-card"
+          onclick="
+            openProduct(
+              'TH true MILK hộp nhỏ',
+              20000,
+              this.querySelector('img').src,
+            )
+          "
+          data-name="TH true MILK hộp nhỏ"
+          data-price="20000"
+        >
+          <span class="heart" onclick="favorite(this)"> ♡ </span>
+
+          <img src="images/suanho.png" />
+
+          <h3>TH true MILK hộp nhỏ</h3>
+
+          <p>Hộp 180ml</p>
+
+          <strong> 20.000đ </strong>
+
+          <button
+            onclick="
+              event.stopPropagation();
+              addCart('TH true MILK hộp nhỏ', 20000, 'images/suanho.png', this);
+            "
+          >
+            Thêm vào giỏ
+          </button>
+        </div>
+      </div>
+      <!-- END PRODUCT GRID -->
+    </section>
+    <!-- END PRODUCT PAGE -->
+
+    <!-- CART -->
+
+    <div id="cart-box">
+      <div class="cart-header">
+        <h2>Giỏ hàng</h2>
+
+        <button onclick="closeCart()">×</button>
+      </div>
+
+      <div class="shipping-box">
+        🚚 Miễn phí giao hàng
+
+        <br />
+
+        Cho đơn từ 300.000đ
+      </div>
+
+      <div id="cart-list">Chưa có sản phẩm</div>
+
+      <h3>
+        Tổng:
+
+        <span id="total"> 0 </span>
+
+        đ
+      </h3>
+
+      <button onclick="checkout()">Thanh toán</button>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script src="products.js"></script>
+  </body>
+</html>

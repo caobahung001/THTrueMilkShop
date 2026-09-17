@@ -1,0 +1,269 @@
+/* =========================
+PRODUCT PAGE
+========================= */
+
+.product-page {
+  padding: 90px 8%;
+
+  background: #fff;
+}
+
+.product-page h1 {
+  text-align: center;
+
+  font-size: 48px;
+
+  color: #003b70;
+
+  margin-bottom: 50px;
+}
+
+/* =========================
+SEARCH
+========================= */
+
+.shop-tools {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 40px;
+}
+
+.shop-tools input {
+  width: 380px;
+
+  height: 45px;
+
+  border-radius: 25px;
+
+  border: 1px solid #dbe8f5;
+
+  padding: 0 20px;
+
+  font-size: 15px;
+}
+
+.shop-tools select {
+  width: 180px;
+
+  height: 45px;
+
+  border-radius: 25px;
+
+  border: 1px solid #dbe8f5;
+
+  padding: 0 20px;
+
+  background: white;
+}
+
+/* =========================
+PRODUCT GRID
+========================= */
+
+.product-grid {
+  display: grid !important;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+
+  gap: 30px;
+
+  width: 100%;
+}
+
+/* =========================
+CARD
+========================= */
+
+.product-card {
+  width: 100% !important;
+
+  min-width: 0;
+
+  height: 470px;
+
+  background: white;
+
+  border-radius: 24px;
+
+  border: 1px solid #e6eef6;
+
+  padding: 20px;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 15px 35px rgba(0, 104, 183, 0.15);
+}
+
+/* =========================
+IMAGE
+========================= */
+
+.product-card img {
+  width: 100%;
+
+  height: 230px;
+
+  object-fit: contain;
+
+  display: block;
+
+  flex-shrink: 0;
+
+  margin-bottom: 15px;
+}
+
+/* =========================
+HEART
+========================= */
+
+.heart {
+  position: absolute;
+
+  top: 18px;
+
+  right: 18px;
+
+  font-size: 30px;
+
+  color: #aaa;
+
+  cursor: pointer;
+
+  z-index: 5;
+}
+
+.heart.active {
+  color: red;
+}
+
+/* =========================
+TITLE
+========================= */
+
+.product-card h3 {
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  color: #003b70;
+
+  font-size: 19px;
+
+  line-height: 1.3;
+
+  margin: 0;
+
+  overflow: hidden;
+}
+
+/* =========================
+DESCRIPTION
+========================= */
+
+.product-card p {
+  height: 25px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  color: #777;
+
+  margin: 5px 0;
+}
+
+/* =========================
+PRICE
+========================= */
+
+.product-card strong {
+  height: 45px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  color: #0068b7;
+
+  font-size: 26px;
+}
+
+/* =========================
+BUTTON
+========================= */
+
+.product-card button {
+  margin-top: auto;
+
+  width: 100%;
+
+  height: 45px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #0068b7;
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background: #004d87;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .product-page {
+    padding: 50px 20px;
+  }
+}
