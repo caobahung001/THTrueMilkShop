@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
@@ -19,23 +18,9 @@
     <header>
       <div class="hamburger" onclick="openMenu()">☰</div>
 
-      <!-- LOGO -->
-
       <a href="index.html" class="logo-link">
-        <div class="logo-custom">
-          <span class="logo-th">
-            TH
-
-            <span class="flower"> ✦ </span>
-          </span>
-
-          <span class="logo-true"> true </span>
-
-          <span class="logo-milk"> MILK </span>
-        </div>
+        <img src="images/Logo.png" class="logo-image" alt="TH true MILK" />
       </a>
-
-      <!-- NAV -->
 
       <nav>
         <a href="index.html"> Trang chủ </a>
@@ -56,7 +41,7 @@
       </div>
     </header>
 
-    <!-- ================= SIDE MENU ================= -->
+    <!-- ================= MENU ================= -->
 
     <div class="overlay" onclick="closeMenu()"></div>
 
@@ -81,37 +66,135 @@
     <!-- ================= PRODUCT DETAIL ================= -->
 
     <section class="detail">
+      <!-- IMAGE -->
+
       <div class="detail-image">
+        <div class="product-badge">⭐ Sản phẩm nổi bật</div>
+
         <img id="product-image" src="images/UHT-nguyen-chat-1L_275x186.png" />
+
+        <div class="image-small">
+          <img src="images/UHT-nguyen-chat-1L_275x186.png" />
+
+          <img src="images/UHT-it-duong-1L_275x186.png" />
+
+          <img src="images/suachua.png" />
+        </div>
       </div>
+
+      <!-- CONTENT -->
 
       <div class="detail-content">
         <h1 id="product-name">TH true MILK nguyên chất</h1>
 
-        <div class="rating">★★★★★</div>
+        <div class="rating">
+          ★★★★★
+
+          <span> (128 đánh giá) </span>
+        </div>
 
         <h2 id="product-price">35.000đ</h2>
 
-        <p id="product-desc">
-          Sữa tươi TH true MILK được sản xuất từ nguồn sữa tươi sạch, giàu dinh
-          dưỡng cho mọi gia đình.
-        </p>
+        <div class="product-tags">
+          <span> 🌱 Sữa sạch </span>
 
-        <div class="quantity-box">
-          <button onclick="changeQty(-1)">−</button>
+          <span> 🥛 Sữa tươi </span>
 
-          <span id="quantity"> 1 </span>
-
-          <button onclick="changeQty(1)">+</button>
+          <span> ⭐ Chính hãng </span>
         </div>
 
-        <button class="add-detail" onclick="addDetailCart()">
-          Thêm vào giỏ hàng
-        </button>
+        <p id="product-desc">
+          Sữa tươi TH true MILK được sản xuất từ nguồn sữa tươi sạch, giàu dinh
+          dưỡng, phù hợp cho mọi gia đình.
+        </p>
+
+        <div class="nutrition-box">
+          <h3>Thông tin dinh dưỡng</h3>
+
+          <ul>
+            <li>Giàu Canxi và Protein</li>
+
+            <li>Hỗ trợ bổ sung năng lượng mỗi ngày</li>
+
+            <li>Sản xuất theo quy trình khép kín</li>
+          </ul>
+        </div>
+
+        <!-- ĐÃ ĐƯA VÀO ĐÂY -->
+
+        <div class="buy-area">
+          <div class="quantity">
+            <button onclick="changeQty(-1)">−</button>
+
+            <span id="quantity"> 1 </span>
+
+            <button onclick="changeQty(1)">+</button>
+          </div>
+
+          <button class="add-cart-detail" onclick="addDetailCart()">
+            🛒 Thêm vào giỏ hàng
+          </button>
+
+          <button class="buy-now" onclick="buyNow()">Mua ngay</button>
+        </div>
       </div>
     </section>
   </body>
 </html>
+<!-- ================= BENEFIT ================= -->
+
+
+<section class="product-benefits">
+
+
+<div>
+
+<h3>
+🚚 Giao hàng nhanh
+</h3>
+
+<p>
+Giao hàng toàn quốc
+</p>
+
+</div>
+
+
+
+<div>
+
+<h3>
+🔒 Thanh toán an toàn
+</h3>
+
+<p>
+Bảo mật thông tin khách hàng
+</p>
+
+</div>
+
+
+
+<div>
+
+<h3>
+🥛 Chính hãng TH
+</h3>
+
+<p>
+Sản phẩm chất lượng cao
+</p>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
 <!-- ================= RELATED PRODUCT ================= -->
 
 
@@ -119,12 +202,8 @@
 
 
 <h2>
-
 Sản phẩm liên quan
-
 </h2>
-
-
 
 
 
@@ -134,7 +213,8 @@ Sản phẩm liên quan
 
 
 
-<div>
+<div class="related-card">
+
 
 <a href="product-detail.html">
 
@@ -142,14 +222,20 @@ Sản phẩm liên quan
 <img src="images/UHT-it-duong-1L_275x186.png">
 
 
-<p>
+<h3>
 
 TH true MILK ít đường
 
+</h3>
+
+
+<p>
+38.000đ
 </p>
 
 
 </a>
+
 
 </div>
 
@@ -158,9 +244,7 @@ TH true MILK ít đường
 
 
 
-
-
-<div>
+<div class="related-card">
 
 
 <a href="product-detail.html">
@@ -169,10 +253,15 @@ TH true MILK ít đường
 <img src="images/suachua.png">
 
 
-<p>
+<h3>
 
 TH true YOGURT
 
+</h3>
+
+
+<p>
+28.000đ
 </p>
 
 
@@ -187,8 +276,7 @@ TH true YOGURT
 
 
 
-
-<div>
+<div class="related-card">
 
 
 <a href="product-detail.html">
@@ -197,10 +285,15 @@ TH true YOGURT
 <img src="images/hạnh-nhân-1-l-thumb.png">
 
 
-<p>
+<h3>
 
 TH true NUT
 
+</h3>
+
+
+<p>
+45.000đ
 </p>
 
 
@@ -208,7 +301,6 @@ TH true NUT
 
 
 </div>
-
 
 
 
@@ -230,18 +322,14 @@ TH true NUT
 <!-- ================= CART ================= -->
 
 
-
 <div id="cart-box">
-
 
 
 <div class="cart-header">
 
 
 <h2>
-
 Giỏ hàng
-
 </h2>
 
 
@@ -253,9 +341,7 @@ Giỏ hàng
 </button>
 
 
-
 </div>
-
 
 
 
@@ -263,21 +349,13 @@ Giỏ hàng
 
 <div class="shipping-box">
 
-
 🚚 Miễn phí giao hàng
-
 
 <br>
 
-
 Cho đơn từ 300.000đ
 
-
-
 </div>
-
-
-
 
 
 
@@ -285,13 +363,9 @@ Cho đơn từ 300.000đ
 
 <div id="cart-list">
 
-
 Chưa có sản phẩm
 
-
 </div>
-
-
 
 
 
@@ -309,7 +383,6 @@ Tổng:
 
 </span>
 
-
 đ
 
 
@@ -319,12 +392,9 @@ Tổng:
 
 
 
-
 <button onclick="checkout()">
 
-
 Thanh toán
-
 
 </button>
 
@@ -332,25 +402,19 @@ Thanh toán
 
 
 
-<button class="continue-btn"
+<button 
+class="continue-btn"
 onclick="closeCart()">
-
 
 
 Tiếp tục mua sắm
 
 
-
 </button>
 
 
 
-
-
-
 </div>
-
-
 
 
 
@@ -364,21 +428,40 @@ Tiếp tục mua sắm
 <footer>
 
 
-
 <h2>
-
 TH true MILK
-
 </h2>
 
 
 
 <p>
-
 Vì sức khỏe mọi gia đình
-
 </p>
 
+
+
+<div class="footer-links">
+
+
+<a href="index.html">
+Trang chủ
+</a>
+
+
+
+<a href="products.html">
+Sản phẩm
+</a>
+
+
+
+<a href="index.html#contact">
+Liên hệ
+</a>
+
+
+
+</div>
 
 
 </footer>
@@ -390,6 +473,9 @@ Vì sức khỏe mọi gia đình
 
 
 
+<!-- ================= SCRIPT ================= -->
+
+
 <script src="script.js"></script>
 
 
@@ -398,6 +484,5 @@ Vì sức khỏe mọi gia đình
 
 
 </body>
-
 
 </html>

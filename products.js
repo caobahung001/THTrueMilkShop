@@ -122,3 +122,18 @@ function viewProduct(name, price, image) {
 
   window.location.href = "product-detail.html";
 }
+function searchProduct() {
+  let value = document.getElementById("search-product").value.toLowerCase();
+
+  let products = document.querySelectorAll(".product-card");
+
+  products.forEach((item) => {
+    let name = item.dataset.name.toLowerCase();
+
+    if (name.includes(value)) {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+  });
+}

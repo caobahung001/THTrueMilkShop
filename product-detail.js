@@ -16,32 +16,49 @@ let currentProduct = JSON.parse(localStorage.getItem("currentProduct")) || {
 // LOAD PRODUCT
 // ===============================
 
-document.addEventListener(
-  "DOMContentLoaded",
+document.addEventListener("DOMContentLoaded", () => {
+  let name = document.getElementById("product-name");
 
-  () => {
-    let name = document.getElementById("product-name");
+  let price = document.getElementById("product-price");
 
-    let price = document.getElementById("product-price");
+  let image = document.getElementById("product-image");
 
-    let image = document.getElementById("product-image");
+  if (name) {
+    name.innerHTML = currentProduct.name;
+  }
 
-    if (name) {
-      name.innerHTML = currentProduct.name;
-    }
+  if (price) {
+    price.innerHTML = Number(currentProduct.price).toLocaleString() + "đ";
+  }
 
-    if (price) {
-      price.innerHTML = currentProduct.price.toLocaleString() + "đ";
-    }
+  if (image) {
+    image.src = currentProduct.image;
+  }
 
-    if (image) {
-      image.src = currentProduct.image;
-    }
-  },
-);
+  let desc = document.getElementById("product-desc");
+
+  if (desc) {
+    desc.innerHTML =
+      currentProduct.name +
+      " mang đến nguồn dinh dưỡng chất lượng, " +
+      "được sản xuất từ nguồn sữa tươi sạch TH true MILK.";
+  }
+});
 
 // ===============================
-// CHANGE QUANTITY
+// CHANGE IMAGE THUMBNAIL
+// ===============================
+
+function changeImage(src) {
+  let main = document.getElementById("product-image");
+
+  if (main) {
+    main.src = src;
+  }
+}
+
+// ===============================
+// QUANTITY
 // ===============================
 
 function changeQty(value) {
@@ -59,19 +76,18 @@ function changeQty(value) {
 }
 
 // ===============================
-// ===============================
-// ADD DETAIL CART
+// ADD TO CART
 // ===============================
 
 function addDetailCart() {
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
-  let product = cart.find((item) => item.name === currentProduct.name);
+  let product = cartData.find((item) => item.name === currentProduct.name);
 
   if (product) {
     product.quantity += quantity;
   } else {
-    cart.push({
+    cartData.push({
       name: currentProduct.name,
 
       price: Number(currentProduct.price),
@@ -82,55 +98,39 @@ function addDetailCart() {
     });
   }
 
-  localStorage.setItem("cart", JSON.stringify(cart));
+  localStorage.setItem("cart", JSON.stringify(cartData));
 
-  // cập nhật số lượng giỏ
+  // cập nhật biến cart của script.js
+  cart = cartData;
 
-  let count = 0;
-
-  cart.forEach((item) => {
-    count += item.quantity;
-  });
-
-  let badge = document.getElementById("cart-count");
-
-  if (badge) {
-    badge.innerHTML = count;
-
-    badge.classList.add("cart-bounce");
-
-    setTimeout(() => {
-      badge.classList.remove("cart-bounce");
-    }, 500);
-  }
-
-  // hiệu ứng bay ảnh
+  updateCart();
 
   flyDetailToCart();
 
-  // thông báo đẹp
-
   showToast("Đã thêm " + currentProduct.name + " vào giỏ hàng");
 }
-let desc = document.getElementById("product-desc");
-
-if (desc) {
-  desc.innerHTML =
-    "" +
-    currentProduct.name +
-    " mang đến nguồn dinh dưỡng chất lượng, " +
-    "được sản xuất từ nguồn sữa tươi sạch TH true MILK.";
-}
 // ===============================
-// FLY IMAGE DETAIL TO CART
+// BUY NOW
+// ===============================
+
+function buyNow() {
+  addDetailCart();
+
+  setTimeout(() => {
+    openCart();
+  }, 700);
+}
+
+// ===============================
+// FLY IMAGE
 // ===============================
 
 function flyDetailToCart() {
   let img = document.getElementById("product-image");
 
-  let cart = document.querySelector(".cart-icon");
+  let cartIcon = document.querySelector(".cart-icon");
 
-  if (!img || !cart) return;
+  if (!img || !cartIcon) return;
 
   let fly = document.createElement("img");
 
@@ -142,16 +142,20 @@ function flyDetailToCart() {
 
   let start = img.getBoundingClientRect();
 
-  let end = cart.getBoundingClientRect();
+  let end = cartIcon.getBoundingClientRect();
 
   fly.style.left = start.left + "px";
 
   fly.style.top = start.top + "px";
 
-  setTimeout(() => {
-    fly.style.left = end.left + "px";
+  fly.style.width = "120px";
 
-    fly.style.top = end.top + "px";
+  fly.style.height = "120px";
+
+  setTimeout(() => {
+    fly.style.left = end.left + 10 + "px";
+
+    fly.style.top = end.top + 10 + "px";
 
     fly.style.width = "35px";
 

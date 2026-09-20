@@ -16,11 +16,11 @@ function saveCart() {
 // ADD CART
 // ===============================
 
-function addCart(name, price, image, btn) {
+function addCart(name, price, image, btn, quantity = 1) {
   let product = cart.find((item) => item.name === name);
 
   if (product) {
-    product.quantity++;
+    product.quantity += quantity;
   } else {
     cart.push({
       name: name,
@@ -29,7 +29,7 @@ function addCart(name, price, image, btn) {
 
       image: image,
 
-      quantity: 1,
+      quantity: quantity,
     });
   }
 
@@ -41,7 +41,6 @@ function addCart(name, price, image, btn) {
     flyToCart(btn, image);
   }
 }
-
 // ===============================
 // FLY TO CART
 // ===============================
@@ -95,6 +94,24 @@ function updateCart() {
 
     total += item.price * item.quantity;
   });
+
+  let shippingBox = document.querySelector(".shipping-box");
+
+  if (shippingBox) {
+    let remain = 300000 - total;
+
+    if (remain > 0) {
+      shippingBox.innerHTML = `
+        🚚 Còn ${remain.toLocaleString()}đ
+        <br>
+        để được miễn phí giao hàng
+        `;
+    } else {
+      shippingBox.innerHTML = `
+        🎉 Bạn đã được miễn phí giao hàng
+        `;
+    }
+  }
 
   let badge = document.getElementById("cart-count");
 
@@ -240,7 +257,11 @@ function removeCart(index) {
 // ===============================
 
 function openCart() {
-  document.getElementById("cart-box").classList.add("show");
+  let cartBox = document.getElementById("cart-box");
+
+  if (cartBox) {
+    cartBox.classList.add("show");
+  }
 }
 
 function closeCart() {

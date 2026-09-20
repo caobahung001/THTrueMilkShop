@@ -21,22 +21,10 @@
       <!-- LOGO -->
 
       <a href="index.html" class="logo-link">
-        <div class="logo-custom">
-          <span class="logo-th">
-            TH
-
-            <span class="flower"> ✦ </span>
-          </span>
-
-          <span class="logo-true"> true </span>
-
-          <span class="logo-milk"> MILK </span>
-        </div>
+        <img src="images/Logo.png" class="logo-image" alt="TH true MILK" />
       </a>
 
       <!-- NAV -->
-
-  
 
       <!-- RIGHT -->
 
@@ -96,598 +84,414 @@
 
     <section class="services">
       <div class="service-box">
-        <div class="icon">🛡️</div>
+        <div class="service-icon">
+          <img src="images/sanpham.png" />
+        </div>
 
         <h3>Sản phẩm chính hãng</h3>
-
         <p>100% TH true MILK</p>
       </div>
 
       <div class="service-box">
-        <div class="icon">🚚</div>
+        <div class="service-icon">
+          <img src="images/giaohang.png" />
+        </div>
 
         <h3>Giao hàng nhanh</h3>
-
         <p>Toàn quốc</p>
       </div>
 
       <div class="service-box">
-        <div class="icon">↩️</div>
+        <div class="service-icon">
+          <img src="images/doihang.png" />
+        </div>
 
         <h3>Đổi trả dễ dàng</h3>
-
         <p>Trong 7 ngày</p>
       </div>
 
       <div class="service-box">
-        <div class="icon">☎️</div>
+        <div class="service-icon">
+          <img src="images/lienhe.png" />
+        </div>
 
         <h3>Tư vấn dinh dưỡng</h3>
-
         <p>Hỗ trợ khách hàng</p>
       </div>
     </section>
+    <!-- ================= GALLERY ================= -->
+
+    <section class="gallery">
+      <img src="images/1.png" />
+
+      <img src="images/2.png" />
+
+      <img src="images/3.png" />
+    </section>
+
+    <!-- ================= STORY ================= -->
+
+    <section id="story" class="story">
+      <img src="images/story.png" />
+
+      <div class="story-content">
+        <h2>Câu chuyện TH true MILK</h2>
+
+        <p>
+          TH true MILK bắt đầu với khát vọng mang đến nguồn sữa tươi sạch cho
+          người Việt, được sản xuất từ hệ thống trang trại công nghệ cao và quy
+          trình khép kín.
+        </p>
+
+        <p>
+          Từ đồng cỏ xanh đến bàn ăn gia đình, mỗi sản phẩm đều được kiểm soát
+          nghiêm ngặt nhằm đảm bảo chất lượng và dinh dưỡng.
+        </p>
+
+        <button>Tìm hiểu thêm</button>
+      </div>
+    </section>
+
+    <!-- ================= NUTRITION ================= -->
+
+    <section class="nutrition">
+      <div class="nutrition-content">
+        <h2>Dinh dưỡng mỗi ngày</h2>
+
+        <p>
+          Sữa cung cấp nhiều dưỡng chất cần thiết cho cơ thể như protein, canxi,
+          vitamin và khoáng chất.
+        </p>
+
+        <ul>
+          <li>✓ Bổ sung năng lượng</li>
+
+          <li>✓ Hỗ trợ phát triển thể chất</li>
+
+          <li>✓ Phù hợp cho mọi gia đình</li>
+        </ul>
+      </div>
+
+      <img src="images/nutrition.png" />
+    </section>
+
+    <!-- ================= PRODUCT SLIDER ================= -->
+
+    <section id="products" class="products-section">
+      <h2>Sản phẩm nổi bật</h2>
+
+      <div class="product-slider">
+        <div class="product-track auto">
+          <div class="product-card">
+            <img src="images/THnguyenchat.jpeg" />
+
+            <h3>TH true MILK nguyên chất</h3>
+
+            <p>Hộp 1L</p>
+
+            <strong> 35.000đ </strong>
+
+            <button
+              onclick="
+                addCart(
+                  'TH true MILK nguyên chất',
+                  35000,
+                  'images/UHT-nguyen-chat-1L_275x186.png',
+                  this,
+                )
+              "
+            >
+              Thêm vào giỏ
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="images/itduong.png" />
+
+            <h3>TH true MILK ít đường</h3>
+
+            <p>Hộp 1L</p>
+
+            <strong> 38.000đ </strong>
+
+            <button
+              onclick="
+                addCart(
+                  'TH true MILK ít đường',
+                  38000,
+                  'images/UHT-it-duong-1L_275x186.png',
+                  this,
+                )
+              "
+            >
+              Thêm vào giỏ
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="images/suachua.png" />
+
+            <h3>TH true YOGURT</h3>
+
+            <p>Lốc 4 hộp</p>
+
+            <strong> 28.000đ </strong>
+
+            <button
+              onclick="
+                addCart('TH true YOGURT', 28000, 'images/suachua.png', this)
+              "
+            >
+              Thêm vào giỏ
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="images/hạnh-nhân-1-l-thumb.png" />
+
+            <h3>TH true NUT</h3>
+
+            <p>Sữa hạt</p>
+
+            <strong> 45.000đ </strong>
+
+            <button
+              onclick="
+                addCart(
+                  'TH true NUT',
+                  45000,
+                  'images/hạnh-nhân-1-l-thumb.png',
+                  this,
+                )
+              "
+            >
+              Thêm vào giỏ
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="images/organic.png" />
+
+            <h3>TH true MILK Organic</h3>
+
+            <p>Sữa hữu cơ</p>
+
+            <strong> 55.000đ </strong>
+
+            <button
+              onclick="
+                addCart(
+                  'TH true MILK Organic',
+                  55000,
+                  'images/organic.png',
+                  this,
+                )
+              "
+            >
+              Thêm vào giỏ
+            </button>
+          </div>
+          <div class="product-card">
+            <img src="images/itduong.png" />
+
+            <h3>TH true MILK ít đường</h3>
+
+            <p>Hộp 1L</p>
+
+            <strong> 38.000đ </strong>
+
+            <button
+              onclick="
+                addCart(
+                  'TH true MILK ít đường',
+                  38000,
+                  'images/UHT-it-duong-1L_275x186.png',
+                  this,
+                )
+              "
+            >
+              Thêm vào giỏ
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="images/suachua.png" />
+
+            <h3>TH true YOGURT</h3>
+
+            <p>Lốc 4 hộp</p>
+
+            <strong> 28.000đ </strong>
+
+            <button
+              onclick="
+                addCart('TH true YOGURT', 28000, 'images/suachua.png', this)
+              "
+            >
+              Thêm vào giỏ
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="images/hạnh-nhân-1-l-thumb.png" />
+
+            <h3>TH true NUT</h3>
+
+            <p>Sữa hạt</p>
+
+            <strong> 45.000đ </strong>
+
+            <button
+              onclick="
+                addCart(
+                  'TH true NUT',
+                  45000,
+                  'images/hạnh-nhân-1-l-thumb.png',
+                  this,
+                )
+              "
+            >
+              Thêm vào giỏ
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="images/organic.png" />
+
+            <h3>TH true MILK Organic</h3>
+
+            <p>Sữa hữu cơ</p>
+
+            <strong> 55.000đ </strong>
+
+            <button
+              onclick="
+                addCart(
+                  'TH true MILK Organic',
+                  55000,
+                  'images/organic.png',
+                  this,
+                )
+              "
+            >
+              Thêm vào giỏ
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div style="text-align: center">
+        <a href="products.html" class="view-more"> Xem tất cả sản phẩm </a>
+      </div>
+    </section>
+    <!-- ================= PROMOTION ================= -->
+
+    <section id="promotion" class="promotion">
+      <h2>Ưu đãi đặc biệt</h2>
+
+      <p>Mua sản phẩm TH true MILK nhận nhiều ưu đãi hấp dẫn.</p>
+
+      <a href="products.html"> Xem ưu đãi </a>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+
+    <footer class="th-footer">
+      <div class="footer-logo">
+        <img src="images/Logo.png" />
+      </div>
+
+      <div class="footer-links">
+        <a>Liên hệ</a>
+
+        <a>Chăm sóc khách hàng</a>
+
+        <a>Dịch vụ giao hàng tận nhà</a>
+
+        <a>Chính sách & Quy định chung</a>
+
+        <a>Chính sách bảo mật</a>
+      </div>
+
+      <h3>Tải Ứng Dụng</h3>
+
+      <div class="download-app">
+        <img src="images/appstore.png" />
+
+        <img src="images/googleplay.png" />
+      </div>
+
+      <div class="social-icon">
+        <img src="images/facebook.png" />
+
+        <img src="images/ins.png" />
+
+        <img src="images/youtube.png" />
+      </div>
+
+      <div class="company">
+        Cơ quan chủ quản: Công ty Cổ phần Chuỗi Thực phẩm TH
+
+        <br />
+
+        Trụ sở: Nghệ An, Việt Nam
+
+        <br />
+
+        Hotline: 1800545440
+
+        <br />
+
+        Email: support@thmilk.vn
+      </div>
+    </footer>
+
+    <!-- ================= CART ================= -->
+
+    <div id="cart-box">
+      <div class="cart-header">
+        <h2>Giỏ hàng</h2>
+
+        <button onclick="closeCart()">×</button>
+      </div>
+
+      <div class="shipping-box">
+        🚚 Miễn phí giao hàng
+
+        <br />
+
+        Đơn hàng từ 300.000đ
+      </div>
+
+      <div id="cart-list">Chưa có sản phẩm</div>
+
+      <div class="cart-total">
+        Tổng:
+
+        <span id="total"> 0 </span>
+
+        đ
+      </div>
+
+      <button onclick="checkout()">Thanh toán</button>
+
+      <button class="continue-btn" onclick="closeCart()">
+        Tiếp tục mua sắm
+      </button>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+      <h2>TH true MILK</h2>
+
+      <p>Vì sức khỏe mọi gia đình</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script src="product-slider.js"></script>
   </body>
-</html>
-<!-- ================= GALLERY ================= -->
-
-<section class="gallery">
-  <img src="images/1.png" />
-
-  <img src="images/2.png" />
-
-  <img src="images/3.png" />
-</section>
-
-<!-- ================= STORY ================= -->
-
-<section id="story" class="story">
-  <img src="images/story.png" />
-
-  <div class="story-content">
-    <h2>Câu chuyện TH true MILK</h2>
-
-    <p>
-      TH true MILK bắt đầu với khát vọng mang đến nguồn sữa tươi sạch cho người
-      Việt, được sản xuất từ hệ thống trang trại công nghệ cao và quy trình khép
-      kín.
-    </p>
-
-    <p>
-      Từ đồng cỏ xanh đến bàn ăn gia đình, mỗi sản phẩm đều được kiểm soát
-      nghiêm ngặt nhằm đảm bảo chất lượng và dinh dưỡng.
-    </p>
-
-    <button>Tìm hiểu thêm</button>
-  </div>
-</section>
-
-<!-- ================= NUTRITION ================= -->
-
-<section class="nutrition">
-  <div class="nutrition-content">
-    <h2>Dinh dưỡng mỗi ngày</h2>
-
-    <p>
-      Sữa cung cấp nhiều dưỡng chất cần thiết cho cơ thể như protein, canxi,
-      vitamin và khoáng chất.
-    </p>
-
-    <ul>
-      <li>✓ Bổ sung năng lượng</li>
-
-      <li>✓ Hỗ trợ phát triển thể chất</li>
-
-      <li>✓ Phù hợp cho mọi gia đình</li>
-    </ul>
-  </div>
-
-  <img src="images/nutrition.png" />
-</section>
-
-
-
-<!-- ================= PRODUCT SLIDER ================= -->
-
-<section id="products" class="products-section">
-
-<h2>Sản phẩm nổi bật</h2>
-
-
-<div class="product-slider">
-
-<div class="product-track auto">
-
-
-<div class="product-card">
-
-<img src="images/THnguyenchat.jpeg">
-
-
-<h3>
-TH true MILK nguyên chất
-</h3>
-
-
-<p>
-Hộp 1L
-</p>
-
-
-<strong>
-35.000đ
-</strong>
-
-
-<button
-onclick="
-addCart(
-'TH true MILK nguyên chất',
-35000,
-'images/UHT-nguyen-chat-1L_275x186.png',
-this
-)
-">
-
-Thêm vào giỏ
-
-</button>
-
-
-</div>
-
-
-
-
-
-<div class="product-card">
-
-<img src="images/itduong.png">
-
-
-<h3>
-TH true MILK ít đường
-</h3>
-
-
-<p>
-Hộp 1L
-</p>
-
-
-<strong>
-38.000đ
-</strong>
-
-
-<button
-onclick="
-addCart(
-'TH true MILK ít đường',
-38000,
-'images/UHT-it-duong-1L_275x186.png',
-this
-)
-">
-
-Thêm vào giỏ
-
-</button>
-
-
-</div>
-
-
-
-
-
-<div class="product-card">
-
-<img src="images/suachua.png">
-
-
-<h3>
-TH true YOGURT
-</h3>
-
-
-<p>
-Lốc 4 hộp
-</p>
-
-
-<strong>
-28.000đ
-</strong>
-
-
-<button
-onclick="
-addCart(
-'TH true YOGURT',
-28000,
-'images/suachua.png',
-this
-)
-">
-
-Thêm vào giỏ
-
-</button>
-
-
-</div>
-
-
-
-
-
-<div class="product-card">
-
-<img src="images/hạnh-nhân-1-l-thumb.png">
-
-
-<h3>
-TH true NUT
-</h3>
-
-
-<p>
-Sữa hạt
-</p>
-
-
-<strong>
-45.000đ
-</strong>
-
-
-<button
-onclick="
-addCart(
-'TH true NUT',
-45000,
-'images/hạnh-nhân-1-l-thumb.png',
-this
-)
-">
-
-Thêm vào giỏ
-
-</button>
-
-
-</div>
-
-
-
-
-
-<div class="product-card">
-
-<img src="images/organic.png">
-
-
-<h3>
-TH true MILK Organic
-</h3>
-
-
-<p>
-Sữa hữu cơ
-</p>
-
-
-<strong>
-55.000đ
-</strong>
-
-
-<button
-onclick="
-addCart(
-'TH true MILK Organic',
-55000,
-'images/organic.png',
-this
-)
-">
-
-Thêm vào giỏ
-
-</button>
-
-
-</div>
-
-
-</div>
-
-</div>
-
-
-<br>
-
-
-<div style="text-align:center">
-
-<a href="products.html" class="view-more">
-
-Xem tất cả sản phẩm
-
-</a>
-
-</div>
-
-
-</section>
-<!-- ================= PROMOTION ================= -->
-
-
-<section id="promotion"
-class="promotion">
-
-
-
-<h2>
-
-Ưu đãi đặc biệt
-
-</h2>
-
-
-
-<p>
-
-Mua sản phẩm TH true MILK
-nhận nhiều ưu đãi hấp dẫn.
-
-</p>
-
-
-
-
-<a href="products.html">
-
-Xem ưu đãi
-
-</a>
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- ================= CONTACT ================= -->
-
-
-<section id="contact"
-class="contact">
-
-
-
-<h2>
-
-Liên hệ
-
-</h2>
-
-
-
-<p>
-
-TH true MILK Store
-
-</p>
-
-
-
-<p>
-
-Hotline:
-1800 xxxx
-
-</p>
-
-
-
-<p>
-
-Email:
-support@thmilk.vn
-
-</p>
-
-
-
-<p>
-
-Thời gian hỗ trợ:
-08:00 - 22:00
-
-</p>
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- ================= CART ================= -->
-
-
-
-<div id="cart-box">
-
-
-
-<div class="cart-header">
-
-
-
-<h2>
-
-Giỏ hàng
-
-</h2>
-
-
-
-
-<button onclick="closeCart()">
-
-×
-
-</button>
-
-
-
-</div>
-
-
-
-
-
-
-<div class="shipping-box">
-
-
-🚚 Miễn phí giao hàng
-
-<br>
-
-Đơn hàng từ 300.000đ
-
-
-</div>
-
-
-
-
-
-
-
-<div id="cart-list">
-
-
-Chưa có sản phẩm
-
-
-</div>
-
-
-
-
-
-
-
-<div class="cart-total">
-
-
-Tổng:
-
-<span id="total">
-
-0
-
-</span>
-
-đ
-
-
-</div>
-
-
-
-
-
-
-<button onclick="checkout()">
-
-Thanh toán
-
-</button>
-
-
-
-
-<button class="continue-btn"
-onclick="closeCart()">
-
-
-Tiếp tục mua sắm
-
-
-</button>
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- ================= FOOTER ================= -->
-
-
-<footer>
-
-
-
-<h2>
-
-TH true MILK
-
-</h2>
-
-
-
-<p>
-
-Vì sức khỏe mọi gia đình
-
-</p>
-
-
-
-</footer>
-
-
-
-
-
-
-
-
-
-<script src="script.js"></script>
-
-<script src="product-slider.js"></script>
-
-
-
-</body>
-
-
 </html>

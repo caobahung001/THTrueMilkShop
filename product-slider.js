@@ -44,3 +44,18 @@ if (slider && track) {
     track.style.transform = `translateX(${move}px)`;
   });
 }
+function slideRight() {
+  const track = document.querySelector(".product-track");
+
+  if (track) {
+    track.scrollLeft += 350;
+  }
+}
+
+function slideLeft() {
+  const track = document.querySelector(".product-track");
+
+  if (track) {
+    track.scrollLeft -= 350;
+  }
+}
